@@ -12,6 +12,8 @@ export default class SessionsController {
 
     const { user, token } = await authenticateUser.execute({ email, password });
 
+    console.log(user);
+
     return res.json({ user: classToClass(user), token });
   }
 }
